@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPI Akidah Akhlak - Adab Terhadap Guru | MTsN 3 Kab. Gorontalo</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldCustom: { 800: '#065F46', 900: '#047857', deep: '#022C22' },
+                        sage: { 50: '#F4F7F5', 100: '#E2ECE9', 200: '#D1E7DD', 400: '#A3B18A', 600: '#5C7E65' },
+                        goldCustom: { 400: '#FACC15', 500: '#EAB308', 600: '#CA8A04', 700: '#B45309' },
+                        toska: { 500: '#14B8A6', 600: '#0D9488', 700: '#0F766E' },
+                        softYellow: { 100: '#FEF9C3', 200: '#FEF08A' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap');
+        :root {
+            --primary-emerald: #065F46;
+            --sage-bg: #F4F7F5;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--sage-bg);
+            color: #1F2937;
+        }
+        .font-arabic { font-family: 'Amiri', serif; }
+        .card-white {
+            background-color: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .badge-kemenag {
+            background: linear-gradient(135deg, #065F46 0%, #047857 100%);
+            border-left: 4px solid #EAB308;
+            color: #FFFFFF;
+        }
+        .btn-toska {
+            background-color: #0D9488;
+            color: #FFFFFF;
+            transition: all 0.2s;
+        }
+        .btn-toska:hover { background-color: #0F766E; transform: translateY(-1px); }
+        .btn-gold {
+            background-color: #EAB308;
+            color: #022C22;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+        .btn-gold:hover { background-color: #CA8A04; color: #FFFFFF; }
+        .tab-btn {
+            color: #065F46;
+            font-weight: 600;
+            background-color: #FFFFFF;
+            border: 1px solid #CBD5E1;
+        }
+        .tab-btn.active {
+            background-color: #0D9488;
+            color: #FFFFFF;
+            border-color: #0D9488;
+            font-weight: 700;
+        }
+        .running-text-container {
+            background-color: #065F46; color: #FEF08A; font-size: 0.85rem; font-weight: 600; padding: 0.4rem 0; overflow: hidden; white-space: nowrap; border-bottom: 2px solid #EAB308;
+        }
+        .running-text-content {
+            display: inline-block; padding-left: 100%; animation: runningTextAnim 22s linear infinite;
+        }
+        .running-text-container:hover .running-text-content { animation-play-state: paused; }
+        @keyframes runningTextAnim { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+        @keyframes pulseGlow { 0%, 100% { transform: scale(1); opacity: 0.9; } 50% { transform: scale(1.03); opacity: 1; } }
+        .animate-pulse-glow { animation: pulseGlow 3s infinite ease-in-out; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F4F7F5; }
+        ::-webkit-scrollbar-thumb { background: #0D9488; border-radius: 4px; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between text-slate-800 relative">
+
+    <!-- COVER SCREEN -->
+    <div id="cover-screen" class="fixed inset-0 z-[100] flex items-center justify-center bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-950 text-white overflow-y-auto p-4 sm:p-6 transition-all duration-700">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FACC15_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+        
+        <div class="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 sm:p-10 max-w-3xl w-full shadow-2xl space-y-6 text-center overflow-hidden animate-pulse-glow my-auto">
+            <div class="flex flex-wrap items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-goldCustom-400">
+                <span class="px-3 py-1 bg-emerald-950/80 rounded-full border border-goldCustom-500/40 shadow-sm">🕌 Kemenag RI • MTsN 3 Kab. Gorontalo</span>
+                <span class="px-3 py-1 bg-teal-900/80 rounded-full border border-teal-400/40 text-teal-200">Fase D / Kelas VII</span>
+            </div>
+            <div class="py-1">
+                <p class="font-arabic text-3xl sm:text-4xl text-goldCustom-400 drop-shadow-md leading-relaxed" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+            </div>
+            <div class="space-y-3">
+                <h1 class="text-2xl sm:text-4xl font-extrabold tracking-wide text-white drop-shadow-lg leading-tight uppercase">
+                    Media Pembelajaran Interaktif <br class="hidden sm:block"/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-goldCustom-400 via-yellow-200 to-goldCustom-500">Akidah Akhlak MTs</span>
+                </h1>
+                <div class="inline-block px-4 py-1.5 bg-emerald-800/60 rounded-xl border border-emerald-500/30">
+                    <p class="text-xs sm:text-sm font-semibold text-emerald-100 tracking-wide">📖 Modul Pembelajaran: <strong class="text-goldCustom-300">Adab Terhadap Guru</strong></p>
+                </div>
+            </div>
+            <div class="pt-4 space-y-2">
+                <button onclick="closeCover()" class="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-goldCustom-400 via-yellow-400 to-goldCustom-500 hover:from-goldCustom-500 text-emeraldCustom-deep font-black text-sm sm:text-base rounded-2xl shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 mx-auto border-2 border-white/40 cursor-pointer">
+                    <span>🚀 MASUK & MULAI PEMBELAJARAN</span>
+                    <span class="text-lg">→</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RUNNING TEXT BANNER -->
+    <div class="running-text-container">
+        <div class="running-text-content">
+            ✨ Selamat Datang di MPI Akidah Akhlak MTs Negeri 3 Kab. Gorontalo • Pengajar: Yudan Wagafir, S.Pd.I., Gr • "Adat Bersendi Syarak, Syarak Bersendi Kitabullah" ✨
+        </div>
+    </div>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="bg-emeraldCustom-800 text-white sticky top-0 z-50 shadow-md border-b-4 border-goldCustom-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-goldCustom-500 flex items-center justify-center text-emeraldCustom-deep font-black text-xl shadow-md border-2 border-white shrink-0">
+                        <svg class="w-7 h-7 text-emeraldCustom-deep" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.82 9L12 4.53 20.18 9 12 13.47 3.82 9zM6 14.85V17c0 2.21 2.69 4 6 4s6-1.79 6-4v-2.15l-6 3.27-6-3.27z"/></svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg md:text-xl font-bold text-goldCustom-400 tracking-wide uppercase">MPI Akidah Akhlak MTs</h1>
+                        <p class="text-xs text-emerald-100">MTs Negeri 3 Kab. Gorontalo • Kelas VII / Fase D</p>
+                    </div>
+                </div>
+                <nav class="flex flex-wrap justify-center gap-1.5 bg-emeraldCustom-900 p-1.5 rounded-xl border border-emerald-600/50 w-full md:w-auto">
+                    <button onclick="openCover()" class="tab-btn px-3 py-2 rounded-lg text-xs md:text-sm transition-all duration-200 bg-amber-100 text-amber-900 hover:bg-amber-200 border-amber-300">🖼️ Cover</button>
+                    <button onclick="switchTab('beranda')" id="tab-beranda" class="tab-btn active px-3.5 py-2 rounded-lg text-xs md:text-sm">🏠 Beranda</button>
+                    <button onclick="switchTab('kuis')" id="tab-kuis" class="tab-btn px-3.5 py-2 rounded-lg text-xs md:text-sm">📝 Kuis Formatif</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow w-full">
+
+        <!-- TAB 1: BERANDA -->
+        <section id="sec-beranda" class="space-y-6">
+            <div class="card-white rounded-2xl p-6 md:p-8 border-t-4 border-goldCustom-500 shadow-md">
+                <div class="max-w-4xl space-y-4">
+                    <span class="inline-block px-3 py-1 bg-softYellow-100 text-goldCustom-700 text-xs font-bold rounded-full border border-goldCustom-500/40">Fase D / Kelas VII • Kurikulum Merdeka Madrasah</span>
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-emeraldCustom-800 leading-tight">
+                        Memuliakan Guru, Menggapai <span class="text-goldCustom-600">Keberkahan & Kemuliaan Ilmu</span>
+                    </h2>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                        Selamat datang di Media Pembelajaran Interaktif (MPI) Akidah Akhlak. Modul ini dirancang secara khusus untuk membimbing Anda memahami dan mempraktikkan adab menghormati guru. 
+                        Kerjakan kuis formatif untuk mengukur capaian pemahaman Anda. Hasil evaluasi akan secara otomatis tersimpan ke dalam database Spreadsheet pengajar.
+                    </p>
+                    <div class="pt-3 flex flex-wrap gap-3">
+                        <button onclick="switchTab('kuis')" class="btn-toska px-6 py-3 font-bold rounded-xl shadow transition-all flex items-center gap-2">
+                            <span>📝 Menuju Kuis Formatif Database</span>
+                            <span>→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: KUIS FORMATIF (TERINTEGRASI DATABASE) -->
+        <section id="sec-kuis" class="hidden space-y-6">
+            
+            <div class="bg-emeraldCustom-800 text-white p-4 rounded-xl shadow flex flex-col md:flex-row items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-lg font-bold text-goldCustom-400">📝 Kuis Evaluasi Formatif Terintegrasi</h2>
+                    <p class="text-xs text-emerald-100">10 soal pilihan ganda. Hasil akan disinkronkan ke Database Google Sheets.</p>
+                </div>
+                <div class="text-xs bg-emeraldCustom-900 px-3 py-1.5 rounded-lg border border-emerald-600 text-goldCustom-300 font-bold">
+                    Progres: <span id="quiz-progress">Form Identitas Siswa</span>
+                </div>
+            </div>
+
+            <!-- FORM IDENTITAS & KONFIGURASI URL GAS -->
+            <div id="quiz-student-form" class="card-white p-6 rounded-2xl border-2 border-sage-300 space-y-5 shadow-sm">
+                <div class="border-b border-slate-200 pb-3">
+                    <h3 class="text-base font-bold text-emeraldCustom-800 flex items-center gap-2">
+                        <span>👤</span> Registrasi Peserta Didik
+                    </h3>
+                    <p class="text-xs text-slate-500">Isi identitas Anda secara lengkap sebelum memulai kuis evaluasi formatif.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-1.5">
+                        <label class="text-xs font-bold text-slate-700">Nama Lengkap Siswa <span class="text-rose-500">*</span></label>
+                        <input type="text" id="input-student-name" placeholder="Contoh: Mohamad Raihan" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs md:text-sm text-slate-800 focus:border-toska-600 focus:outline-none">
+                    </div>
+                    <div class="space-y-1.5">
+                        <label class="text-xs font-bold text-slate-700">Kelas / Rombel MTsN 3 <span class="text-rose-500">*</span></label>
+                        <select id="input-student-class" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs md:text-sm text-slate-800 focus:border-toska-600 focus:outline-none">
+                            <option value="">-- Pilih Kelas --</option>
+                            <option value="VII-1">Kelas VII-1</option>
+                            <option value="VII-2">Kelas VII-2</option>
+                            <option value="VII-3">Kelas VII-3</option>
+                            <option value="VII-4">Kelas VII-4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Google Apps Script URL Integration Box -->
+                <div class="bg-sage-50 p-4 rounded-xl border border-sage-300 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-[11px] font-bold text-emeraldCustom-800 flex items-center gap-1.5">
+                            <span>⚙️</span> Web App Google Apps Script (Database Spreadsheet URL):
+                        </label>
+                        <button type="button" onclick="toggleGasConfig()" class="text-[10px] text-toska-700 hover:underline">Ubah URL</button>
+                    </div>
+                    <!-- Default bisa diset kosong agar pengguna wajib mengisi, atau berikan placeholder URL -->
+                    <input type="url" id="input-gas-url" placeholder="https://script.google.com/macros/s/AKfy.../exec" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-xs text-slate-700 focus:border-toska-600 focus:outline-none">
+                    <p class="text-[10px] text-slate-500 italic">Pastikan URL Apps Script yang dimasukkan sudah di-deploy dengan akses "Anyone".</p>
+                </div>
+
+                <div id="form-error-msg" class="hidden p-3 bg-rose-100 border border-rose-300 text-rose-700 text-xs rounded-lg font-medium">
+                    ⚠️ Silakan lengkapi Nama, Kelas, dan pastikan URL Web App sudah terisi!
+                </div>
+
+                <button onclick="startQuizWithStudentInfo()" class="w-full py-3.5 btn-gold rounded-xl shadow text-xs md:text-sm uppercase tracking-wider">
+                    🚀 Mulai Pengerjaan Kuis Formatif (10 Soal)
+                </button>
+            </div>
+
+            <!-- Quiz Display Container -->
+            <div id="quiz-container" class="hidden card-white p-6 rounded-2xl border-2 border-sage-300 space-y-6 shadow-sm">
+                <div class="space-y-2 border-b border-slate-200 pb-4">
+                    <div class="flex items-center justify-between">
+                        <span id="quiz-q-num" class="text-xs font-bold text-emeraldCustom-800 uppercase tracking-wider">Soal #1</span>
+                        <span id="quiz-timer" class="text-xs font-mono bg-sage-100 px-2.5 py-1 rounded border border-sage-300 text-slate-700 font-bold">⏱️ Waktu: 00:00</span>
+                    </div>
+                    <h3 id="quiz-q-text" class="text-sm md:text-base font-semibold text-slate-800 leading-relaxed">Loading...</h3>
+                </div>
+                <div id="quiz-options" class="space-y-3"></div>
+                
+                <div id="quiz-feedback" class="hidden p-4 rounded-xl border space-y-2 text-xs md:text-sm transition-all duration-300">
+                    <div id="quiz-feedback-status" class="font-bold"></div>
+                    <div id="quiz-feedback-explain" class="text-slate-700 leading-relaxed"></div>
+                </div>
+
+                <div class="flex justify-end pt-2">
+                    <button id="btn-next-quiz" onclick="nextQuestion()" class="hidden px-6 py-2.5 btn-toska font-bold rounded-xl text-xs md:text-sm shadow">
+                        Lanjut ke Soal Berikutnya →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Result View -->
+            <div id="quiz-result-card" class="hidden card-white p-8 rounded-2xl border-2 border-goldCustom-500 text-center space-y-6 shadow-md">
+                <div class="w-20 h-20 mx-auto rounded-full bg-softYellow-100 border-2 border-goldCustom-500 flex items-center justify-center text-4xl shadow-sm">🏆</div>
+                <div>
+                    <h3 class="text-2xl font-extrabold text-emeraldCustom-800">Hasil Evaluasi Formatif</h3>
+                    <p id="result-student-info" class="text-xs text-slate-600 mt-1">Capaian Pembelajaran Adab Terhadap Guru</p>
+                </div>
+
+                <!-- Sync Status Box -->
+                <div id="quiz-sync-status" class="p-3 bg-sage-100 rounded-xl border border-sage-300 text-xs text-slate-700 flex items-center justify-center gap-2">
+                    <span class="animate-spin">⏳</span>
+                    <span>Menyimpan hasil kuis ke Spreadsheet Database...</span>
+                </div>
+
+                <div class="bg-sage-50 p-6 rounded-xl border border-sage-300 inline-block min-w-[240px]">
+                    <div class="text-xs text-slate-500 mb-1">Skor Akhir Anda:</div>
+                    <div id="final-score" class="text-4xl font-black text-emeraldCustom-800">0</div>
+                    <div id="final-badge" class="mt-2 text-xs font-bold text-slate-700"></div>
+                </div>
+
+                <div class="flex justify-center gap-3 pt-2">
+                    <button onclick="restartQuiz()" class="px-6 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs border border-slate-300 transition-all">
+                        🔄 Ulangi Kuis
+                    </button>
+                    <button onclick="switchTab('beranda')" class="px-6 py-2.5 btn-toska font-bold rounded-xl text-xs shadow">
+                        🏠 Kembali ke Beranda
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-emeraldCustom-800 text-white py-4 mt-8 text-center text-xs border-t-2 border-goldCustom-500">
+        <div class="max-w-7xl mx-auto px-4 space-y-1">
+            <p class="font-bold text-goldCustom-400">Media Pembelajaran Interaktif (MPI) • Akidah Akhlak MTs</p>
+            <p class="text-[11px] text-emerald-100">MTs Negeri 3 Kab. Gorontalo</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        let studentData = { name: '', class: '', startTime: null, endTime: null, duration: '' };
+        let DEFAULT_GAS_URL = ""; 
+
+        function closeCover() {
+            const cover = document.getElementById('cover-screen');
+            cover.classList.add('opacity-0', 'pointer-events-none', 'scale-95');
+            setTimeout(() => cover.classList.add('hidden'), 700);
+        }
+
+        function openCover() {
+            const cover = document.getElementById('cover-screen');
+            cover.classList.remove('hidden', 'pointer-events-none');
+            setTimeout(() => cover.classList.remove('opacity-0', 'scale-95'), 10);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function switchTab(tabName) {
+            const tabs = ['beranda', 'kuis'];
+            tabs.forEach(tab => {
+                const sec = document.getElementById(`sec-${tab}`);
+                const btn = document.getElementById(`tab-${tab}`);
+                if (tab === tabName) {
+                    if(sec) sec.classList.remove('hidden');
+                    if(btn) btn.classList.add('active');
+                } else {
+                    if(sec) sec.classList.add('hidden');
+                    if(btn) btn.classList.remove('active');
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // DATABASE SOAL KUIS
+        const quizData = [
+            {
+                q: "Surah Al-Mujadilah ayat 11 menegaskan peninggian derajat bagi orang yang beriman dan berilmu. Mengapa menghormati guru menjadi kunci utama dalam meraih keberkahan ilmu tersebut?",
+                options: [
+                    "A. Karena guru adalah orang yang berhak menentukan nilai ijazah akhir madrasah.",
+                    "B. Karena guru merupakan perantara (wasilah) ilmu dan ridhonya menjadi pintu terbukanya pemahaman serta keberkahan dari Allah SWT.",
+                    "C. Karena tanpa guru, seseorang tidak bisa membeli buku cetak pelajaran.",
+                    "D. Karena aturan tersebut hanya berlaku apabila guru merupakan anggota keluarga sendiri."
+                ],
+                answer: 1, optionKeys: ["A", "B", "C", "D"],
+                explanation: "Pembahasan: Guru adalah perantara (wasilah) tersampaikannya ilmu keagamaan. Penghormatan mendatangkan ridho Allah SWT."
+            },
+            {
+                q: "Raihan melihat Pak Yudan sedang kesulitan membawa tumpukan laptop dan buku nilai di koridor madrasah. Sikap yang paling mencerminkan adab murid mulia adalah...",
+                options: [
+                    "A. Tetap berjalan santai karena bukan jadwal piket kelasnya.",
+                    "B. Meminta imbalan nilai tambahan terlebih dahulu sebelum membantu.",
+                    "C. Segera menghampiri guru dengan sopan, mengucapkan salam, dan tulus menawarkan bantuan.",
+                    "D. Menyuruh teman lain untuk membantu sementara ia langsung masuk ke dalam kelas."
+                ],
+                answer: 2, optionKeys: ["A", "B", "C", "D"],
+                explanation: "Pembahasan: Murid berakhlak mulia akan peka dan sukarela membantu guru sebagai wujud pemuliaan."
+            },
+            {
+                q: "Sayyidina Ali bin Abi Thalib RA menyatakan kesiapannya menjadi hamba sahaya bagi siapa saja yang mengajarinya walau hanya satu huruf. Makna utama ungkapan ini adalah...",
+                options: [
+                    "A. Tingginya kedudukan ilmu dan kewajiban memuliakan sosok guru tanpa batas.",
+                    "B. Perintah untuk menjual jasa murid di madrasah.",
+                    "C. Kewajiban menyerahkan seluruh harta benda pribadi kepada guru.",
+                    "D. Hak guru untuk menghukum murid tanpa batasan syariat."
+                ],
+                answer: 0, optionKeys: ["A", "B", "C", "D"],
+                explanation: "Pembahasan: Menunjukkan sikap rendah hati (tawadhu) luar biasa di hadapan guru."
+            },
+            {
+                q: "Saat guru sedang menjelaskan materi Akidah Akhlak, terdapat bagian yang kurang dipahami Fatimah. Adab bertanya yang benar adalah...",
+                options: [
+                    "A. Langsung memotong pembicaraan guru di tengah-tengah penjelasan.",
+                    "B. Berteriak dari kursi belakang agar suara terdengar jelas.",
+                    "C. Mengangkat tangan terlebih dahulu, menunggu diizinkan guru, lalu menyampaikan pertanyaan.",
+                    "D. Mendiamkan saja dan membicarakan kekurangan guru kepada teman sekelas."
+                ],
+                answer: 2, optionKeys: ["A", "B", "C", "D"],
+                explanation: "Pembahasan: Adab bertanya meliputi meminta izin (mengangkat tangan) dan menunggu kesempatan."
+            },
+            {
+                q: "Bagaimana penerapkan nilai Huyula (gotong royong) masyarakat Gorontalo dalam menghormati guru?",
+                options: [
+                    "A. Menunggu permohonan bantuan dari guru baru mau bekerja.",
+                    "B. Bersama-sama teman sekelas secara sukarela membersihkan kelas sebelum guru masuk.",
+                    "C. Meminta uang kebersihan kepada sekolah setelah mengerjakan piket.",
+                    "D. Menyerahkan seluruh tugas kebersihan kepada petugas madrasah."
+                ],
+                answer: 1, optionKeys: ["A", "B", "C", "D"],
+                explanation: "Pembahasan: Inisiatif membersihkan kelas bersama teman adalah wujud nyata Huyula kepada guru."
+            },
+            {
+                q: "Seorang murid yang sering meremehkan dan berbicara tidak sopan kepada gurunya kemungkinan besar akan mengalami dampak buruk berupa...",
+                options: [
+                    "A. Diberikan kemudahan dalam menjawab semua ujian kuis.",
+                    "B. Hilangnya keberkahan ilmu sehingga ilmu sulit bermanfaat.",
+                    "C. Otomatis menjadi juara kelas di madrasah.",
+                    "D. Mendapatkan pujian dari kawan-kawan sekelas."
+                ],
+                answer: 1, optionKeys: ["A", "B", "C", "D"],
+                explanation: "Pembahasan: Sikap su'ul adab kepada guru dapat mencabut keberkahan ilmu dan menyulitkan pemahaman."
+            },
+            {
+                q: "Saat berpapasan dengan guru di pasar atau kawasan pesisir Gorontalo, sikap terpuji murid adalah...",
+                options: [
+                    "A. Pura-pura tidak kenal agar tidak perlu menyapa.",
+                    "B. Menyapa dengan ramah, mengucap salam, dan menunjukkan sikap hormat.",
+                    "C. Bersembunyi di balik bangunan hingga guru lewat.",
+                    "D. Mengabaikan keberadaan guru karena di luar jam sekolah."
+                ],
+                answer: 1, optionKeys: ["A", "B", "C", "D"],
+                explanation: "Pembahasan: Penghormatan kepada guru tidak dibatasi oleh ruang kelas saja."
+            },
+            {
+                q: "Manakah contoh adab batiniah (sikap hati) yang benar terhadap guru?",
+                options: [
+                    "A. Merasa lebih pintar dari guru karena sering membaca di internet.",
+                    "B. Selalu mencari-cari kesalahan perkataan guru.",
+                    "C. Menganggap jasa guru sebatas transaksi pembayaran SPP.",
+                    "D. Mendoakan kebaikan, kesehatan, dan keberkahan bagi guru seusai shalat."
+                ],
+                answer: 3, optionKeys: ["A", "B", "C", "D"],
+                explanation: "Pembahasan: Adab batiniah diwujudkan dengan husnudzon dan mendoakan guru."
+            },
+            {
+                q: "Ketika guru memberikan teguran atas kesalahan di madrasah, respon murid yang berakhlak adalah...",
+                options: [
+                    "A. Membantah dengan kasar dan menyalahkan teman.",
+                    "B. Merajuk dan membanting pintu kelas.",
+                    "C. Menerima nasihat dengan lapang dada, meminta maaf, dan berjanji memperbaiki.",
+                    "D. Acuh tak acuh dan mengulangi kesalahan."
+                ],
+                answer: 2, optionKeys: ["A", "B", "C", "D"],
+                explanation: "Pembahasan: Meminta maaf dan memperbaiki diri adalah ciri murid tawadhu saat dinasihati."
+            },
+            {
+                q: "Mengapa ridho guru menentukan kesuksesan menuntut ilmu?",
+                options: [
+                    "A. Karena guru mengajarkan kebenaran, sehingga memuliakan guru adalah wujud menghormati ajaran Allah.",
+                    "B. Karena guru memiliki kewenangan penuh menghukum fisik.",
+                    "C. Karena ridho guru dapat dibeli dengan hadiah mahal.",
+                    "D. Karena hanya guru penentu masuk surga."
+                ],
+                answer: 0, optionKeys: ["A", "B", "C", "D"],
+                explanation: "Pembahasan: Memuliakan penyampai ilmu Allah merupakan bagian integral dari pemuliaan agama Islam."
+            }
+        ];
+
+        let currentQ = 0;
+        let score = 0;
+        let userAnswers = Array(quizData.length).fill(null);
+        let timerInterval = null;
+        let secondsElapsed = 0;
+
+        function toggleGasConfig() {
+            document.getElementById('input-gas-url').focus();
+        }
+
+        function startQuizWithStudentInfo() {
+            const nameInput = document.getElementById('input-student-name').value.trim();
+            const classInput = document.getElementById('input-student-class').value;
+            const gasUrlInput = document.getElementById('input-gas-url').value.trim();
+            const errorMsg = document.getElementById('form-error-msg');
+
+            if (!nameInput || !classInput || !gasUrlInput) {
+                errorMsg.classList.remove('hidden');
+                return;
+            }
+
+            errorMsg.classList.add('hidden');
+            studentData.name = nameInput;
+            studentData.class = classInput;
+            studentData.startTime = new Date();
+
+            DEFAULT_GAS_URL = gasUrlInput;
+            localStorage.setItem('mpi_gas_url', gasUrlInput);
+
+            document.getElementById('quiz-student-form').classList.add('hidden');
+            document.getElementById('quiz-container').classList.remove('hidden');
+
+            startTimer();
+            loadQuestion();
+        }
+
+        function startTimer() {
+            secondsElapsed = 0;
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                secondsElapsed++;
+                const mins = String(Math.floor(secondsElapsed / 60)).padStart(2, '0');
+                const secs = String(secondsElapsed % 60).padStart(2, '0');
+                document.getElementById('quiz-timer').textContent = `⏱️ Waktu: ${mins}:${secs}`;
+            }, 1000);
+        }
+
+        function loadQuestion() {
+            const q = quizData[currentQ];
+            document.getElementById('quiz-q-num').textContent = `Soal #${currentQ + 1} dari ${quizData.length}`;
+            document.getElementById('quiz-q-text').textContent = q.q;
+            document.getElementById('quiz-progress').textContent = `Soal ${currentQ + 1} dari ${quizData.length}`;
+
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+
+            const feedbackArea = document.getElementById('quiz-feedback');
+            feedbackArea.classList.add('hidden');
+            document.getElementById('btn-next-quiz').classList.add('hidden');
+
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full p-4 bg-white hover:bg-sage-50 border border-slate-300 rounded-xl text-left text-xs md:text-sm text-slate-800 font-medium transition-all hover:border-toska-600 focus:outline-none shadow-sm";
+                btn.textContent = opt;
+                btn.onclick = () => selectAnswer(idx);
+                
+                if (userAnswers[currentQ] !== null) {
+                    btn.disabled = true;
+                    if (idx === q.answer) {
+                        btn.classList.add('bg-sage-200', 'border-emeraldCustom-800', 'text-emeraldCustom-800', 'font-bold');
+                    } else if (idx === userAnswers[currentQ]) {
+                        btn.classList.add('bg-rose-100', 'border-rose-500', 'text-rose-800');
+                    }
+                }
+                optionsContainer.appendChild(btn);
+            });
+
+            if (userAnswers[currentQ] !== null) {
+                showQuizFeedback(userAnswers[currentQ]);
+            }
+        }
+
+        function selectAnswer(idx) {
+            if (userAnswers[currentQ] !== null) return;
+            userAnswers[currentQ] = idx;
+            if (idx === quizData[currentQ].answer) score += 10;
+            loadQuestion();
+        }
+
+        function showQuizFeedback(chosenIdx) {
+            const q = quizData[currentQ];
+            const feedbackArea = document.getElementById('quiz-feedback');
+            const status = document.getElementById('quiz-feedback-status');
+            const explain = document.getElementById('quiz-feedback-explain');
+            const nextBtn = document.getElementById('btn-next-quiz');
+
+            feedbackArea.classList.remove('hidden');
+            if (chosenIdx === q.answer) {
+                feedbackArea.className = "p-4 rounded-xl border border-emeraldCustom-800 bg-sage-100 space-y-1.5 text-xs md:text-sm";
+                status.textContent = "✅ Jawaban Anda Benar! (+10 Poin)";
+                status.className = "font-bold text-emeraldCustom-800";
+            } else {
+                feedbackArea.className = "p-4 rounded-xl border border-rose-300 bg-rose-50 space-y-1.5 text-xs md:text-sm";
+                status.textContent = "❌ Jawaban Belum Tepat";
+                status.className = "font-bold text-rose-700";
+            }
+
+            explain.textContent = q.explanation;
+            nextBtn.classList.remove('hidden');
+            nextBtn.textContent = (currentQ === quizData.length - 1) ? "Lihat Hasil Akhir Kuis 🏆" : "Lanjut ke Soal Berikutnya →";
+        }
+
+        function nextQuestion() {
+            if (currentQ < quizData.length - 1) {
+                currentQ++; loadQuestion();
+            } else {
+                showQuizResults();
+            }
+        }
+
+        function showQuizResults() {
+            clearInterval(timerInterval);
+            studentData.endTime = new Date();
+            const diffSeconds = Math.round((studentData.endTime - studentData.startTime) / 1000);
+            const minutes = Math.floor(diffSeconds / 60);
+            const seconds = diffSeconds % 60;
+            studentData.duration = `${minutes} menit ${seconds} detik`;
+
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('quiz-result-card').classList.remove('hidden');
+            document.getElementById('result-student-info').textContent = `Siswa: ${studentData.name} (${studentData.class}) • Waktu: ${studentData.duration}`;
+            document.getElementById('final-score').textContent = score;
+
+            const badge = document.getElementById('final-badge');
+            if (score >= 80) {
+                badge.textContent = "🌟 Predikat: Sangat Baik"; badge.className = "mt-2 text-xs font-bold text-emeraldCustom-800";
+            } else if (score >= 60) {
+                badge.textContent = "👍 Predikat: Cukup Baik"; badge.className = "mt-2 text-xs font-bold text-goldCustom-700";
+            } else {
+                badge.textContent = "📚 Predikat: Perlu Pendalaman"; badge.className = "mt-2 text-xs font-bold text-rose-700";
+            }
+
+            let correctCount = 0; let wrongCount = 0; let detailAnswersList = [];
+            quizData.forEach((q, idx) => {
+                const isCorrect = (userAnswers[idx] === q.answer);
+                if (isCorrect) correctCount++; else wrongCount++;
+                const userOptKey = userAnswers[idx] !== null ? q.optionKeys[userAnswers[idx]] : '-';
+                const correctOptKey = q.optionKeys[q.answer];
+                detailAnswersList.push(`S${idx+1}: ${userOptKey} (${isCorrect ? 'Benar' : 'Salah, Kunci:'+correctOptKey})`);
+            });
+
+            // Paket Data JSON yang dikirim ke Google Apps Script
+            const payloadData = {
+                nama: studentData.name,
+                kelas: studentData.class,
+                waktuPengerjaan: studentData.duration,
+                jumlahBenar: correctCount,
+                jumlahSalah: wrongCount,
+                nilai: score,
+                detailJawaban: detailAnswersList.join(' | '),
+                soalData: quizData.map(q => ({
+                    pertanyaan: q.q,
+                    opsi: q.options.join("\n"),
+                    kunci: q.optionKeys[q.answer],
+                    pembahasan: q.explanation
+                }))
+            };
+
+            sendDataToGoogleSheets(payloadData);
+        }
+
+        function sendDataToGoogleSheets(payload) {
+            const syncStatus = document.getElementById('quiz-sync-status');
+            syncStatus.className = "p-3 bg-sage-100 rounded-xl border border-sage-300 text-xs text-slate-700 flex items-center justify-center gap-2";
+            syncStatus.innerHTML = `<span class="animate-spin">⏳</span> <span>Mengirim data evaluasi ke Spreadsheet...</span>`;
+
+            fetch(DEFAULT_GAS_URL, {
+                method: "POST",
+                mode: "no-cors", 
+                headers: { "Content-Type": "text/plain" },
+                body: JSON.stringify(payload)
+            })
+            .then(() => {
+                syncStatus.className = "p-3 bg-sage-200 rounded-xl border border-emeraldCustom-800 text-xs text-emeraldCustom-800 font-bold";
+                syncStatus.innerHTML = "✅ Hasil kuis berhasil tersimpan ke Database Spreadsheet Guru!";
+            })
+            .catch(err => {
+                syncStatus.className = "p-3 bg-rose-100 rounded-xl border border-rose-300 text-xs text-rose-700 font-medium";
+                syncStatus.innerHTML = "⚠️ Terjadi masalah koneksi. Hasil tersimpan secara lokal.";
+            });
+        }
+
+        function restartQuiz() {
+            currentQ = 0; score = 0; userAnswers = Array(quizData.length).fill(null);
+            document.getElementById('quiz-result-card').classList.add('hidden');
+            document.getElementById('quiz-student-form').classList.remove('hidden');
+        }
+
+        window.onload = function() {
+            const savedUrl = localStorage.getItem('mpi_gas_url');
+            if (savedUrl) {
+                document.getElementById('input-gas-url').value = savedUrl;
+            }
+        };
+    </script>
+</body>
+</html>
